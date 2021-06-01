@@ -1,9 +1,10 @@
 {
     "name": "asyncswarm/doctrine",
-    "description": "Doctrine ORM with native pgsql driver and async reqursts",
+    "description": "Doctrine ORM with native pgsql driver and async requests",
     "type": "library",
     "require": {
         "php-64bit": ">=7.4",
+        "ext-pgsql": "*",
         "doctrine/orm": "2.8"
     },
     "autoload": {
