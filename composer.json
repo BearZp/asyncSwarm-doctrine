@@ -1,0 +1,22 @@
+{
+    "name": "asyncswarm/doctrine",
+    "description": "Doctrine ORM with native pgsql driver and async reqursts",
+    "type": "library",
+    "require": {
+        "php-64bit": ">=7.4",
+        "doctrine/orm": "2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "AsyncSwarm\\Doctrine\\": "src/"
+        }
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "BearZp",
+            "email": "gulidov.vadim@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
