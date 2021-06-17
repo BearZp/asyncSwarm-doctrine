@@ -116,11 +116,10 @@ class SQLParser extends SQLParserUtils
 
             if (! isset($arrayPositions[$paramName]) && ! isset($arrayPositions[':' . $paramName])) {
                 $pos         += $queryOffset;
-                $queryOffset -= $paramLen - 2;
+                $queryOffset -= $paramLen - (strlen($i)+1);
                 $paramsOrd[]  = $value;
                 $typesOrd[]   = static::extractParam($paramName, $types, false, ParameterType::STRING);
                 $query        = substr($query, 0, $pos) . '$' . $i++ . substr($query, $pos + $paramLen);
-
                 continue;
             }
 
