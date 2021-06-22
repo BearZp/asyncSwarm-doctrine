@@ -55,6 +55,11 @@ class PsqlStatement implements IteratorAggregate, StatementInterface, Result
         $this->connection = $connection;
     }
 
+    public function __destruct()
+    {
+        $this->free();
+    }
+
     /**
      * @throws SQLAnywhereException
      */
